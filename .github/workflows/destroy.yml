@@ -19,8 +19,8 @@ jobs:
        
 
       - name: Terraform Plan
-        run: terraform plan -var-file=dev.tfvars 
+        run: terraform plan -var-file=dev.tfvars # -var-file=prod.tfvars -- for destroying resource in prod env
         
 
       - name: Terraform Destroy
-        run: terraform destroy -var-file=dev.tfvars -auto-approve
+        run: terraform destroy -var-file=dev.tfvars -auto-approve # -var-file=prod.tfvars -- for destroying resource in prod env
